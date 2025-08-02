@@ -1,0 +1,180 @@
+/* Custom styles for the Telegram Card Counter Bot Dashboard */
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+    font-weight: 600;
+}
+
+/* Status Badge */
+.badge-status {
+    font-size: 1rem;
+    padding: 8px 12px;
+}
+
+.status-online {
+    background-color: #28a745;
+}
+
+.status-offline {
+    background-color: #dc3545;
+}
+
+.status-loading {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+/* Counter Cards */
+.counter-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.counter-card:hover {
+    transform: translateY(-5px);
+}
+
+.counter-card.hearts {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff5252 100%);
+}
+
+.counter-card.diamonds {
+    background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+}
+
+.counter-card.clubs {
+    background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+}
+
+.counter-card.spades {
+    background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+}
+
+.counter-symbol {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.counter-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.counter-label {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+/* Preview Box */
+.preview-box {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: monospace;
+    white-space: pre-line;
+    min-height: 80px;
+}
+
+/* Activity Log */
+#activity-log {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.activity-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-time {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Status Indicator Animation */
+.status-indicator .fa-circle {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .counter-card {
+        margin-bottom: 10px;
+    }
+    
+    .counter-symbol {
+        font-size: 1.5rem;
+    }
+    
+    .counter-value {
+        font-size: 1.2rem;
+    }
+}
+
+/* Button animations */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Alert styles */
+.alert {
+    border-radius: 8px;
+}
+
+/* Custom scrollbar for activity log */
+#activity-log::-webkit-scrollbar {
+    width: 8px;
+}
+
+#activity-log::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#activity-log::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+#activity-log::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
