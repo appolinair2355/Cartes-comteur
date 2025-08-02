@@ -1,0 +1,22 @@
+
+services:
+  - type: web
+    name: telegram-bot-web
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python simple_web.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: PORT
+        value: "10000"
+    healthCheckPath: /
+    
+  - type: worker
+    name: telegram-bot-service
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python simple_bot.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
